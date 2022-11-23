@@ -1,9 +1,11 @@
-import DeleteController from "./controllers/DeleteController.js";
-import GetController from "./controllers/GetController.js";
-import PostController from "./controllers/PostController.js";
-import UpdateController from "./controllers/UpdateController.js";
-import { validate, catCreateSchema, catPutSchema, catPatchSchema } from "./middleware/validator.js";
-import { Router } from "express";
+import { Router } from 'express'
+import DeleteController from './controllers/DeleteController.js'
+import GetController from './controllers/GetController.js'
+import PostController from './controllers/PostController.js'
+import UpdateController from './controllers/UpdateController.js'
+import {
+  validate, catCreateSchema, catPutSchema, catPatchSchema,
+} from './middleware/validator.js'
 
 const router = new Router()
 
@@ -15,5 +17,5 @@ router.delete('/:user/cats/:id', DeleteController.deleteCat)
 router.patch('/:user/cats/:id', validate({ body: catPatchSchema }), UpdateController.updateCat)
 
 export {
-    router
+  router,
 }
