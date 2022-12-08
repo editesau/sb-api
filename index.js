@@ -17,7 +17,17 @@ app.use((error, request, response, next) => {
 })
 app.use((error, request, response, next) => {
   if (error instanceof ValidationError) {
-    response.status(400).json({ error: { message: error.validationErrors.body, method: request.method, requestBody: request.body } })
+    response.status(400)
+      .json(
+        {
+          error:
+          {
+            message: error.validationErrors.body,
+            method: request.method,
+            requestBody: request.body,
+          },
+        },
+      )
     next()
   } else {
     next(error)
