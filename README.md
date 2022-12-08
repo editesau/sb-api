@@ -63,6 +63,6 @@ API для котиков, доработанное, которое умение
 
 ## How to connect
 API доступно по адресу: https://dsegorus.fvds.ru/<endpoint>, 
-например https://dsegorus.fvds.ru/sb-cats/editesau/cats
+например https://dsegorus.fvds.ru/sb-api/editesau/cats
 Если будут вопросы/замечания пишите в чатике или в личку @editesau
 Надеюсь не зря потратил время)
